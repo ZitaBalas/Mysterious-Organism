@@ -1,0 +1,74 @@
+/* Jumbotron */
+
+.jumbotron-container {
+    @extend %flex-center;
+    width: 100%;
+    min-height: 800px;
+    background: center url('../../Pics/1561052.jpg');
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  
+    .jumbotron {
+      width: 100%;
+      min-height: 60%;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      animation: fadeEffect 1.75s ease-out forwards;
+      padding-bottom: 0.5rem;
+  
+      #jumbotext-1, #jumbotext-2, #jumbotext-3 {
+        font-size: $rem-base;
+        width: 80%;
+        margin: 2.3% auto {
+          left: 100%;
+        }
+      }
+  
+      #jumbotext-1 {
+        @include float(0s);
+        font-size: 2.3rem;
+        margin-top: 3%;
+      }
+      
+      #jumbotext-2 {
+        @include float(500ms);
+      } 
+      
+      #jumbotext-3 {
+        @include float(1s);
+      } 
+    }
+  
+    #generator {
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      height: fit-content;
+      font-size: $rem-base;
+      padding: 1rem;
+      color:$orange;
+      border: none;
+      margin: 0 {
+        bottom: -10%;
+      }
+      animation: float-down 500ms ease-in-out 1.75s 1 forwards;
+  
+      @include mquery(780px) {
+        position: relative;
+        bottom: 1rem;
+        margin-top: $rem-base;
+  
+        span {
+          display: none;
+        }
+      }
+  
+      img {
+        max-height: 1.6rem;
+        color: $primary-color;
+      }
+    }
+    
+  }

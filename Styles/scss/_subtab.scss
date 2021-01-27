@@ -1,0 +1,143 @@
+/* All Subtab Content */
+
+#subtab-container {
+
+    .sublinks {
+      animation: renderOptions 350ms forwards;
+      display: none;
+      width: 20%;
+      background:$lightblue;
+      color: $whitesmoke;
+      padding: 0.9rem 0;
+      margin: 0 {
+        top: 0.5rem;
+      }
+      border: none {
+        radius: 0;
+        top-right-radius: 16px;
+        bottom-right-radius: 16px;
+      }  
+  
+      &:hover {
+        background: $darkblue;
+      }
+    
+      &:active {
+        color:$blackish-blue;
+      }
+      
+      &.active {
+        background:$lightblue;
+        color: $primary-color;
+        border-bottom-right-radius: 0;
+        cursor: default;
+      }
+    }
+  
+    .subtab-content {
+      width: 50%;
+  
+      h4 {
+        font-size: $rem-base;
+        padding: {
+          top: 1.5rem;
+          bottom: 0.5rem;
+        }
+      }
+    
+      tbody {
+        tr {
+          background:$very-lightblue;
+        }
+      }
+    
+      button:disabled {
+        background-color: gray;
+        color: $primary-color;
+        border-color: darkgray;
+        cursor: default;
+      }
+  
+      .related {
+        width: 90%;
+        display: none;
+  
+        th:nth-child(2) {
+          width: 60%;
+        }
+      
+        th:nth-child(3) {
+          width: 20%
+        }
+      }
+    } 
+  }
+  
+  /* Subtab Compare */
+  
+  #compare-two {
+    table {
+      width: 95%;
+      border: none;
+  
+      th {
+        border: 2px solid $whitesmoke;
+  
+        &:nth-child(1) { 
+          @extend %table-compare-two;
+        }
+  
+        &:nth-child(3) {
+          width: 55%;
+        }
+      }
+  
+      tbody {
+        border: 2px solid $whitesmoke;
+  
+        td:nth-child(1) { 
+          @extend %table-compare-two;
+        }
+  
+        .dropdown-list {
+          @extend %flex-center;
+  
+          select {
+            width: 90%;
+            height: $rem-base;
+            font-size: 1.3rem;
+            margin-top: 0.15rem;
+            background: $whitesmoke;
+            color:$blackish-blue;
+          }      
+        }
+      }
+    }
+  
+    strong {
+      font-size: 1.8rem;
+      margin: {
+        top: 1.3rem;
+        left: 1.3rem;
+      }
+      float: left;
+  
+      output {
+        margin-left: 1rem;
+        font-size: $rem-base;
+        color: hsl(38, 100%, 55%);
+      }
+    }
+  
+    button {
+      float: right;
+      margin: {
+        right: 1.3rem;
+        top: 1rem;
+      }
+    }
+  
+    details {
+      margin-top: 4.5rem;
+    }
+  }

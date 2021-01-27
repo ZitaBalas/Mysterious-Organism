@@ -1,0 +1,61 @@
+/* All Tab Content */
+
+.tabcontent {
+    width: $width-tablet;
+    display: none;
+    border: {
+      top-right-radius: 16px;
+      bottom-right-radius: 16px;
+    }
+    background: $very-darkblue;
+    text-align: center;
+    padding: 0.5rem;
+    @include render(700ms);
+  
+    th:nth-child(3) {
+      width: 44%;
+    }
+  
+    details {
+      width: 98%;
+      margin: 1% auto;
+  
+      summary {
+        width: 100%;
+        background: none;
+        border-radius: 8px;
+        color: $primary-color;
+        font-size: 1.3rem;
+        padding: 0.5rem 0;
+        cursor: pointer;
+  
+        &:hover {
+          background:$blackish-blue;
+        }
+      
+        &:active {
+          color: orange;
+        }
+    
+      }
+    
+      p {
+        padding: 1rem;
+        background: hsl(197, 53%, 90%);
+        color:$blackish-blue;
+        font-size: 1.5rem;
+        text-align: left;
+        border-radius: 25px;
+      }
+    } 
+  }
+  
+  /* Content of Tab Viability */
+  
+  #viability {
+    width: 45%;
+  
+    th:nth-child(3) {
+      width: 20%
+    }
+  }

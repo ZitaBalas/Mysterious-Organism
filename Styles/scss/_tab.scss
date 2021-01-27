@@ -1,0 +1,54 @@
+/* All Tab */
+
+.tab {
+    width: 660px;
+    overflow: hidden;
+    box-shadow: -2px 2px #ccc inset;
+    background-color: $light-whitesmoke;
+    @include border-radius(top, 8px);
+  
+    #tab-list {
+      display: none;
+    }
+  
+    button {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1.8rem;
+      margin: auto 0.1rem {
+        top: 2px;
+      }
+      padding: 0.6rem;
+  
+      &:hover {
+        background-color: $lightblue;
+      }
+  
+      &.active {
+        background: $very-darkblue;
+        color: $primary-color;
+        @include border-radius(bottom, 0);
+      }
+    }
+  
+    #close {
+      margin-left: 0.5rem;
+      font-size: 1.5rem;
+      width: 20px;
+      padding: 0 0.5rem;
+      background: rgb(253, 70, 70);
+      border-radius: 50%;
+  
+      &:hover {
+        background: rgb(179, 40, 40);
+        cursor: pointer;
+      }
+      
+      &:active {
+        color:$blackish-blue;
+      }
+    }
+}  

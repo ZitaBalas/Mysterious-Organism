@@ -1,0 +1,57 @@
+/* All Tables */
+
+table {
+    @extend %table-set;
+    width: 98%;
+    border-collapse: collapse;
+  
+    th {
+      @extend %table-set;
+    }
+  
+    tbody {
+      tr {
+        background:$very-lightblue;
+        color:$blackish-blue;
+  
+        &:nth-child(even) {
+          background: $whitesmoke;
+        }
+      }
+  
+      td {
+        padding: 0.2rem 0.8rem;
+        text-align: center;
+        font-size: 1.9rem;
+      }
+    }
+  }
+
+/* All buttons */
+
+button {
+    font: {
+      size: 1.5rem;
+      weight: bold;
+    }
+    background-color: orange;
+    color:$very-darkblue;
+    margin-top: 2%;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid white {
+      radius: 25px;
+    }
+  
+    &:hover {
+      background-color:$darkgreen;
+      border-color: $lightgreen;
+      color: $primary-color;
+      cursor: pointer;
+    }
+  
+    &:active {
+      background-color: $blue;
+      color: $blackish-blue;
+      border-color: $very-darkblue;
+    }
+  }

@@ -1,0 +1,58 @@
+%table-set {
+  padding: 0.3rem 0.5rem;
+  text-align: center;
+  font-size: 1.9rem;
+  border: 3px solid white;
+  margin: auto {
+    top: 0.5rem;
+  }
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%table-compare-two {
+  color: $primary-color;
+  background-color: $very-darkblue;
+  border: none;
+}
+
+@mixin float($delay) {
+  animation: float 750ms ease-in-out $delay forwards;
+}
+
+@mixin render($duration) {
+  animation: renderEffect $duration forwards;
+}
+
+@mixin border-radius($position, $value) {
+  border-#{$position}-left-radius: $value;
+  border-#{$position}-right-radius: $value;
+}
+
+@mixin mquery($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin opacity-with($keyframe, $margin-from, $margin-to) {
+  @keyframes #{$keyframe} {
+    from {opacity: 0; margin-left: $margin-from;}
+    to {opacity: 1;  margin-left: $margin-to;}
+    @content;
+  }
+}
+
+@include opacity-with(fadeEffect, inherit, inherit);
+@include opacity-with(float, 90%, 10%);
+@include opacity-with(renderEffect, 0%, 42%);
+@include opacity-with(renderOptions, 20%, 42%);
+
+@include opacity-with(float-down, inherit, inherit) {
+  from {margin-bottom: 8%; background: rgba(11, 23, 29, 0);}
+  to {margin-bottom: 1%; background: rgba(11, 23, 29, 0.8);}
+}

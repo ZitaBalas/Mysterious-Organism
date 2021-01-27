@@ -1,0 +1,78 @@
+/* List of P.aequor Samples */
+
+#list-container {
+    max-height: 700px;
+    width: 660px;
+    overflow-y: scroll;
+    background: $very-darkblue;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    border: {
+      top: 10px solid $very-darkblue;
+      bottom: 10px solid $very-darkblue;
+    }
+    @include border-radius(bottom, 8px);  
+  
+    .sticky {
+      background:$very-darkblue;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+  
+      button {
+        margin: 0 1rem {
+          bottom: 0.7rem;
+        }
+      }
+    }
+    
+    table {
+      width: 96%;
+      margin-top: 0;
+  
+      #list {
+        tr {
+          background-color: $bluish-white;
+          color: $very-darkblue;
+  
+          &:nth-child(even) {
+            background-color: $light-whitesmoke; 
+          }
+  
+          &:hover {
+            cursor: pointer;
+            color: $primary-color;
+            background-color: $blue;
+          }
+  
+          &.selected {
+            background-color: $lightgreen;
+            color: $primary-color;
+  
+            &:hover {
+              background-color:$darkgreen;
+            }
+          }
+  
+          input {
+            transform: scale(1.8);
+            margin-bottom: 10px;
+            cursor: pointer;
+          
+            &:checked:after {
+              content: "";
+              border-radius: 2px;
+              position: absolute;
+              height: 13px;
+              width: 13px;
+              left: 0;
+              top: 0;
+              background: green;
+              opacity: 0.7;
+            }
+          }  
+        }
+      }
+    }
+}  

@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+  
+  body {
+    background: {
+      image: url('../../Pics/1561074.jpg');
+      position: 50% -115px;
+    }
+    color: $whitesmoke;
+    font: {
+      family: 'Source Sans Pro', sans-serif;
+      size: $rem-base;
+    }
+  }
+  
+  /* Header */
+  
+  header {
+    @extend %flex-center;
+    background-color:$blackish-blue;
+    padding: $rem-base;
+    position: relative;
+  
+    img {
+      height: 70%;
+      position: absolute;
+      left: $rem-base;
+      bottom: $rem-base;
+      @include mquery(1050px) {
+        display: none;
+      }
+    }
+  
+    h1 {
+      color: $primary-color;
+      font-size: 5rem;
+      @include mquery(780px) {
+        font-size: 4rem;
+      }
+  
+      @include mquery(640px) {
+        font-size: 3.5rem;
+      }
+      @include mquery(570px) {
+        text-align: center;
+      }
+    }
+  }
+
+  /* Main */
+
+main {
+    display: none;
+    width: 1570px;
+    min-height: 1000px;
+    position: relative;
+    margin: auto;
+    padding-top: 6rem;
+}
+
+  /* Footer */
+
+footer {
+    color: $primary-color;
+    background-color:$blackish-blue;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: $rem-base;
+  
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      color: $primary-color;
+  
+      &:hover {
+        color:$orange;
+        font-size: 1.6rem;
+      }
+  
+      &:active {
+        color:palegreen;
+        font-size: 1.5rem;
+      }
+    }
+  }

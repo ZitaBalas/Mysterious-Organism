@@ -1,0 +1,133 @@
+@include mquery(1570px) {
+
+    @keyframes renderEffect {
+      from {opacity: 0; margin-top: -3%}
+      to {opacity: 1; margin-top: 0%}
+    }
+  
+    @keyframes renderOptions {
+      from {opacity: 0; margin-left: -2%}
+      to {opacity: 1; margin-left: 0}
+    }
+  
+    main {
+      width: $width-tablet;
+      height: auto;
+    }
+  
+    .tab {
+      width: $width-tablet;
+  
+      #tab-list {
+        display: inline;
+      }
+  
+      #close {
+        margin-left: 11rem;
+      }
+    }
+  
+    #list-container {
+      max-height: 600px;
+      width: $width-tablet;
+      z-index: 0;
+      @include render(300ms);
+  
+      .sticky {
+        float: left;
+        top: 78%;
+        left: 2%;
+    
+        button {
+          display: block;
+        }
+      }
+  
+      table {
+        width: 70%;
+        float: right;
+        margin: {
+          top: 1.5rem;
+          right: 4%;
+        }
+      }
+    }
+  
+    .tabcontent {
+      border: {
+        top-right-radius: 0;
+        bottom-left-radius: 16px !important;
+      }
+      @include render(300ms);
+    }
+  
+    #viability {
+      width: $width-tablet;
+  
+      table {
+        width: 70%;
+      }
+    }  
+  
+    #subtab-container {
+      max-height: fit-content;
+      width: 100%;
+      background: $very-darkblue;
+      padding-left: 1rem;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      @include border-radius(bottom, 16px);
+  
+      .sublinks {
+        flex-grow: 1;
+        margin: 1rem;
+        border-radius: 8px;
+  
+        &:hover {
+          color: $blackish-blue;
+          background: $whitesmoke;
+        }
+      
+        &:active {
+          background: $darkblue;
+        }
+        
+        &.active {
+          color: $blackish-blue;
+          background: rgb(255, 165, 0);
+          border: 3px solid white{
+            radius: 16px;
+          }
+          cursor: default;
+        }
+      }
+
+      #flex-grow-2 {
+        flex-grow: 2;
+      }
+  
+      .subtab-content {
+        border-top-right-radius: 0;
+        width: $width-tablet;
+        padding-top: 0;
+        order: 4;
+        @include render(200ms);
+  
+        h4 {
+          padding-top: 0.5rem;
+        }
+
+        .related {
+            width: 75%;
+          }
+      }
+
+      #compare-two {
+        table {
+          width: 80%;      
+        }
+      }
+     
+    }
+  }
