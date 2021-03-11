@@ -39,7 +39,7 @@
   }
 }
 
-@mixin opacity-with($keyframe, $margin-from, $margin-to) {
+@mixin opacity-with($keyframe, $margin-from: inherit, $margin-to: inherit) {
   @keyframes #{$keyframe} {
     from {opacity: 0; margin-left: $margin-from;}
     to {opacity: 1;  margin-left: $margin-to;}
@@ -47,12 +47,12 @@
   }
 }
 
-@include opacity-with(fadeEffect, inherit, inherit);
+@include opacity-with(fadeEffect);
 @include opacity-with(float, 90%, 10%);
 @include opacity-with(renderEffect, 0%, 42%);
 @include opacity-with(renderOptions, 20%, 42%);
 
-@include opacity-with(float-down, inherit, inherit) {
+@include opacity-with(float-down) {
   from {margin-bottom: 8%; background: rgba(11, 23, 29, 0);}
   to {margin-bottom: 1%; background: rgba(11, 23, 29, 0.8);}
 }
